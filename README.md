@@ -5,8 +5,11 @@ Além de treinar a estruturação de código, também foi uma forma de consolida
 
 🔎 Escopo dos testes
 Login válido → Garantir que o usuário consiga acessar o sistema.
+
 Login inválido → Validar o retorno de erro quando as credenciais não são corretas.
+
 Dashboard → Verificação de acesso à página principal após o login.
+
 My Info → Preenchimento e atualização das informações pessoais do usuário.
 
 ⚙️ Tecnologias utilizadas
