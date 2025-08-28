@@ -1,4 +1,4 @@
-##Projeto de Automação de Testes - OrangeHRM 🦋
+## Projeto de Automação de Testes - OrangeHRM 🦋
 
 Este projeto tem como finalidade o aperfeiçoamento prático em automação de testes com Cypress, reforçando boas práticas de QA em cenários de autenticação, navegação e atualização de informações.
 Além de treinar a estruturação de código, também foi uma forma de consolidar o aprendizado em testes ponta a ponta e aplicar uma organização baseada em Page Objects.
