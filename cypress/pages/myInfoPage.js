@@ -23,7 +23,7 @@ class MyInfoPage{
        cy.get(this.selectorsList().lastNameField).clear().type(lastNameField)
     }
 
-    fillEmployeeDetails(employeeId, otherId, driverId, dateField1, dateField2) {
+    fillEmployeeDetails(employeeId, otherId, driverId, dateField1,) {
        cy.get(this.selectorsList().genericField).eq(3).clear().type(employeeId)
        cy.get(this.selectorsList().genericField).eq(4).clear().type(otherId)
        cy.get(this.selectorsList().genericField).eq(5).clear().type(driverId)
@@ -32,15 +32,26 @@ class MyInfoPage{
     }   
 
     fillStatus(dateField2){
-       cy.get(this.selectorsList().dateCloseButton).click()
-       cy.get(this.selectorsList().statusGeneric).eq(0).click()
-       cy.get(this.selectorsList().firstSecond).click()
-       cy.get(this.selectorsList().statusGeneric).eq(1).click()
-       cy.get(this.selectorsList().secondSecond).click()
-       cy.get(this.selectorsList().dateField).eq(1).clear().type(dateField2)
-       cy.get(this.selectorsList().dateCloseButton).click()
-       cy.get(this.selectorsList().submitButton).eq(1).click()
-    }
+    cy.get(this.selectorsList().dateCloseButton)
+      .should('exist')
+      .should('be.visible')
+      .as('closeBtn')
+    cy.get('@closeBtn').click({force: true})
+
+    cy.get(this.selectorsList().statusGeneric).eq(0).click()
+    cy.get(this.selectorsList().firstSecond).click()
+    cy.get(this.selectorsList().statusGeneric).eq(1).click()
+    cy.get(this.selectorsList().secondSecond).click()
+    cy.get(this.selectorsList().dateField).eq(1).clear().type(dateField2)
+
+    cy.get(this.selectorsList().dateCloseButton)
+      .should('exist')
+      .should('be.visible')
+      .as('closeBtn2')
+    cy.get('@closeBtn2').click({force: true})
+
+    cy.get(this.selectorsList().submitButton).eq(1).click()
+}
 
 }
 
